@@ -93,7 +93,7 @@ class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                         key, BIG_INTEGER_PREFIX + integerValue.toString(Character.MAX_RADIX)),
                 result);
           } else {
-            commitAsync(preferences.edit().putLong(key, number.longValue()), result);
+            commitAsync(preferences.edit().putInt(key, number), result);
           }
           break;
         case "setString":
